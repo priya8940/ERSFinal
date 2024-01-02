@@ -2,6 +2,9 @@ const empModel = require('../models/employee');
 const reviewModel = require('../models/review');
 module.exports.register =async (req, res)=>{
     const {email, name, password} = req.body;
+    //check if is_admin is true
+    const is_admin = req?.body?.is_admin ? true : false;
+    
     //check if user already exists or not
     const userFound = await empModel.findOne({'email':email});
     let savedUser;
@@ -10,7 +13,8 @@ module.exports.register =async (req, res)=>{
         savedUser = await empModel.create({
             'email': email,
             'name': name,
-            'password': password
+            'password': password,
+            'is_admin':is_admin
         })
     }else{
         //return response, user already exists
