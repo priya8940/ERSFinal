@@ -182,7 +182,7 @@ module.exports.update = async(req, res)=>{
 }
 
 module.exports.whoAmI = async(req, res)=>{
-    const coockie = req.cookies.emp_id;
+    const coockie = req?.cookies?.emp_id;
     if(coockie == -1 || coockie == '-1' || coockie == null || coockie == undefined){
         res.json({
             'status_code': 403,
