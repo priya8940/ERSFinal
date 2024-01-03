@@ -13,7 +13,7 @@ Node.js
 
 Install:
 To install all the dependencies of the project, run the following command:
-git clone
+git clone https://github.com/priya8940/ERSFinal.git
 npm install
 npm start
 
