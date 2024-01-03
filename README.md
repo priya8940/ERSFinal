@@ -1,4 +1,4 @@
-EMPLOYEE REVIEW SYSTEM
+EMPLOYEE REVIEW SYSTEM>>
 The employee review system is an online platform designed to assist companies in managing their employee's performance evaluations.
 The system allows the Admin to conduct employee performance, modify reviews, track progress, and provide feedback in a centralized location.
 
