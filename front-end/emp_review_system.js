@@ -713,6 +713,7 @@ function updateReview(id){
             let pEple = document.createElement('p');
             pEple.innerText = data.review.message;
             reviewDiv.replaceChild(pEple, inputEle);
+            doneBtn.innerText = 'Update';
         })
     })
 
