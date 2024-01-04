@@ -224,7 +224,17 @@ module.exports.addReviewParticipant = async (req, res)=>{
     let reviewerEmail = req.body.email;
     
     let reviewerEmployee = await empModel.findOne({'email':reviewerEmail});
-    reviewerEmployee.reviewer_for.push(revieweeId);
+    let reviewerForList = reviewerEmployee?.reviewer_for;
+    let alreadyExists = false;
+    for(let eviewerForId of reviewerForList){
+        if(eviewerForId == revieweeId){
+            alreadyExists = true;
+            break;
+        }
+    }
+    if(alreadyExists == false){
+        reviewerEmployee.reviewer_for.push(revieweeId);
+    }
     await reviewerEmployee.save();
     
     res.json({
