@@ -64,7 +64,7 @@ module.exports.login = async (req, res) =>{
         //password is not correct
         res.json({
             'status_code':409,
-            'message':'Enter the correct password'
+            'message':'Enter correct credential'
         });
         return res;
     }
@@ -104,8 +104,9 @@ module.exports.employee = async (req, res)=>{
     const loggedInUser = await empModel.findById(coockie);
     if(loggedInUser==null){
         res.json({
-            'message': 'User is not logged in',
-            'status_code': 403
+            'status_code': 403,
+            'message': 'User is not logged in'
+           
         })
         return res;
     }

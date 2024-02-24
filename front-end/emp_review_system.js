@@ -77,6 +77,10 @@ registerButton.addEventListener('click',()=>{
 let loginButton = document.getElementById('login');
 
 loginButton.addEventListener('click',()=>{
+   let bodyEle=document.getElementsByTagName('body')
+   console.log(bodyEle);
+   bodyEle.style.background="url('')";
+
     let rootEle = document.getElementById('root');
     rootEle.innerHTML="";
     let emailEle = document.createElement('input');
