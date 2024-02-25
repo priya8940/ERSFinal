@@ -5,10 +5,12 @@ body{
     height: 50px;
     padding:2px;
     display: flex;
+    background-color: #C8C8EE;
 }
 .title-heading h1{
     margin-top:10px;
     /* color: white; */
+    margin-left: 50%;
 }
 /*main heading styles*/
 .title-heading{
@@ -25,18 +27,20 @@ body{
 .header-buttons button{
     height: 30px;
     margin-right: 10px;
-    background-color: #D3B0E6;
+    background-color: #C8C8EE;
 }
 
 
 .register, .login{
-    margin-top: 100px;
     text-align: center;
+    padding: 12%;
     
 
 }
 .register input{
     font-size: 15px;
+    
+    
 }
 
 
@@ -87,7 +91,9 @@ body{
     margin-top: 5px;
     padding: 5px;
 }
-body {
+#root{
+    width: 100%;
+    min-height: 800px;
     background-image: url("https://visme.co/blog/wp-content/uploads/2021/10/25-Performance-Review-Ex-Thumbnail.jpg");
     background-repeat: no-repeat, repeat;
     background-size: cover;

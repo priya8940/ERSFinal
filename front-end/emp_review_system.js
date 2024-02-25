@@ -5,6 +5,10 @@ let registerButton = document.getElementById('register');
 
 registerButton.addEventListener('click',()=>{
     let rootEle = document.getElementById('root');
+    rootEle.style.background="none"
+    rootEle.style. backgroundImage= "linear-gradient(#D1A2BF, #C2CC57)"
+    rootEle.style. backgroundColor= ""
+
     rootEle.innerHTML="";
     let nameEle = document.createElement('input');
     nameEle.setAttribute('type','text');
@@ -77,9 +81,10 @@ registerButton.addEventListener('click',()=>{
 let loginButton = document.getElementById('login');
 
 loginButton.addEventListener('click',()=>{
-   let bodyEle=document.getElementsByTagName('body')
-   console.log(bodyEle);
-   bodyEle.style.background="url('')";
+   let bodyEle=document.getElementById('root')
+   bodyEle.style.backgroundImage='none'
+   bodyEle.style.backgroundImage="linear-gradient(#D1A2BF, #C2CC57)"
+
 
     let rootEle = document.getElementById('root');
     rootEle.innerHTML="";
@@ -800,6 +805,7 @@ function isSeesionActive(){
             }else{
                 //user NOT logged in
                 let h3Ele = document.createElement('h3');
+                h3Ele.style.margin=0;
                 h3Ele.innerText = `Welcome to ERS homepage, Please register or login to use ERS Application`;
                 let rootEle = document.getElementById('root');
                 rootEle.innerHTML = '';
